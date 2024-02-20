@@ -12,7 +12,7 @@ vector<int> bubbleSort(vector<int> arr) {
     bool swapped = false;
     for (int j = 0; j < i; j++){
       if (arr[j] > arr[j + 1]) {
-        std::swap(arr[j], arr[j + 1]);
+        swap(arr[j], arr[j + 1]);
         swapped = true;
       }
     }
@@ -31,7 +31,7 @@ vector<int> selectionSort(vector<int> arr) {
         min = j;
       }
     }
-    std::swap(arr[i], arr[min]);
+    swap(arr[i], arr[min]);
   }
   return arr;
 }
@@ -42,7 +42,7 @@ vector<int> insertionSort(vector<int> arr) {
   for (int i = 0; i < arr.size(); i++) {
     int current = i;
     while (current > 0 && arr[current] < arr[current - 1]) {
-      std::swap(arr[current], arr[current - 1]);
+      swap(arr[current], arr[current - 1]);
       current--;
     }
   }
